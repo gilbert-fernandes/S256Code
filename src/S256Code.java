@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
  * and length. A regexp pattern is also used to check the codeVerifier
  * is compliant with section 2.3 RFC 3986. You can also enter a custom
  * codeVerifier and get the S256(codeVerifier) expected for OpenID/OAuth2
- * clients. This is a basic Eclipse projet + Java API only
+ * clients. This is a basic Eclipse projet + Java API only1
  * 
  * https://tools.ietf.org/html/rfc7636
  * https://tools.ietf.org/html/rfc3986
