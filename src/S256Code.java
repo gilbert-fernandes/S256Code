@@ -113,7 +113,10 @@ public class S256Code {
 		MessageDigest sha256 = MessageDigest.getInstance("SHA-256");
 		sha256.update(codeVerifier.getBytes("ISO_8859_1"));
 		byte[] bytes = sha256.digest();
-		return Base64.getEncoder().withoutPadding().encodeToString(bytes);		
+		// code_challenge = BASE64URL-ENCODE(SHA256(ASCII(code_verifier)))
+		// with codeVerifier as ISO8859-1 ASCII
+		// RFC 7636 section 4.2
+		return Base64.getUrlEncoder().withoutPadding().encodeToString(bytes);		
 	}
 
 	/**
